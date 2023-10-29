@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>AnimalApp</ion-title>
+  </ion-toolbar>
+
+  <ion-img src="img/dog.png"></ion-img>
+
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nome" placeholder="Insira o nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-input label="Regiao" placeholder="Insira a região " [(ngModel)]="regiao"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Comentario" placeholder="Insira o Comentario" [(ngModel)]="comentario"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-input label="Telefone" type="number" placeholder="Insira o telefone" [(ngModel)]="telefone"></ion-input>
+    </ion-item> -->
+
+    <!-- <ion-item>
+      <ion-input label="Email" placeholder="Insira o email" [(ngModel)]="email"></ion-input>
+    </ion-item> -->
+
+    <ion-item>
+      <ion-select label="Gênero" placeholder="Selecione" [(ngModel)]="genero">
+        <ion-select-option value="0">Mamiferos</ion-select-option>
+        <ion-select-option value="1">Aves</ion-select-option>
+        <ion-select-option value="3">Repteis</ion-select-option>
+        <ion-select-option value="4">Anfibios</ion-select-option>
+        <ion-select-option value="5">Peixes</ion-select-option>
+        <ion-select-option value="6">Insetos</ion-select-option>
+        <ion-select-option value="7">Aracnideos</ion-select-option>
+        <ion-select-option value="8">Crustaceos</ion-select-option>
+        <ion-select-option value="9">Moluscos</ion-select-option>
+        <ion-select-option value="10">Equinidermos</ion-select-option>
+        <ion-select-option value="11">Outro</ion-select-option>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-button size="default" color="success" shape="round">
+        <input type="file" (change)="uploadFile($event.target)" />
+      </ion-button>
+    </ion-item>
+
+    <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+  </ion-list>
+</ion-content>
